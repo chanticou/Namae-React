@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// IMPORT CSS
+import './App.css'
+
+import NavBar from './NavBar';
+
+import Creditos from './Creditos';
+import ItemListContainer from './ItemListContainer';
+import Main from './Main'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <NavBar />
+    <ItemListContainer/>
+    <Main city='SUSHI EN BUENOS AIRES' />
+    <Main name='NAMAE' />
+    <Main paragraph='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, ullam odit aliquam sint reiciendis numquam nesciunt iste assumenda soluta, atque blanditiis accusantium doloremque tempore voluptatem. Recusandae minus officiis nulla? Error!' />
+ 
+    <Creditos /> 
+</>
   );
 }
 
