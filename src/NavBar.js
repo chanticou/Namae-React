@@ -1,4 +1,3 @@
-import CartWidget from './CartWidget'
 
 
 
@@ -11,7 +10,7 @@ const NavBar =()=>{
                 <li>PEDIR ONLINE</li>
                 <li>PROMOS</li>
                 <li>CONTACTO</li>
-                <li><CartWidget/></li>
+               
             </ul>
        
             </>
