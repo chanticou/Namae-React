@@ -66,6 +66,7 @@ class SearchArea extends React.Component {
                             img={objeto.img}
                             name={objeto.name}
                             description={objeto.description}
+                            stock={objeto.stock}
                             price={objeto.price}
                           />
                         ))

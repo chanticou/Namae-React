@@ -5,9 +5,12 @@ import CartWidget from "./CartWidget";
 
 const Products = ({name, description, price, stock, img}) =>{
 
+
     //ESTADOS
     //MOSTRAR DESCRIPCION
     const [mostrarDescription, setMostrarDescription] = useState(true)
+
+    const[sinStock, setSinStock] = useState(false)
 
     //contador
     //usestate(0)=> me va a devolver un array, y decir cual es el valor inicial que contiene el estado
@@ -20,14 +23,20 @@ const Products = ({name, description, price, stock, img}) =>{
     //FUNCIONES
     const sumar=()=>{
         //setcontador => metodo ASINCRONO => metodo que cambia el estado es Asincrono
-
-        setcontador(contador + 1)
+        if(contador >= stock){
+            setSinStock(true)
+           
+   
+        }else{
+            setcontador(contador + 1)
+      
+        }
     
 
     }
 
     const restar =()=>{
-        if(contador>0){
+        if(contador > 0) {
         setcontador(contador-1)
     }
     
@@ -37,6 +46,9 @@ const Products = ({name, description, price, stock, img}) =>{
     const descriptionFood = () =>{
         setMostrarDescription(!mostrarDescription)
     }
+
+
+
     //FIN FUNCIONES
 
     //RETURN
@@ -57,12 +69,16 @@ const Products = ({name, description, price, stock, img}) =>{
                 <h4>{description}</h4>
                 <h3>Precio:$ {price}</h3>
                 </>
-        
             }
 
+     
             <button onClick={sumar}>  + </button><span className='quiantity'>{contador}</span>
             
             <button onClick={restar}> -  </button><span className='quiantity'></span>
+            
+    
+            <button disabled={sinStock}>comprar</button>
+            
         </div>
 
 

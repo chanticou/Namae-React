@@ -94,3 +94,12 @@ margin-top:50px;
   font-size: 1.5em;
   font-weight: bold;
 }
+
+
+/* //sin stock */
+.sinStock{
+  padding:50px;
+  background-color: black;
+  opacity:.8;
+  color:white;
+}
