@@ -8,50 +8,57 @@ const data = [
         name:'Sushi Hawaian',
         description:'Roll relleno de philadephia y salmon ahumado',
         price:400,
-        stock:120,
-        img:philadefia
+        stock:10,
+        img:philadefia,
+        initial:0
     },
     {
         name:'Sunami',
-        tipe:'Roll relleno de philadephia y salmon ahumado',
+        tipe:'Roll de Langostino apanados con',
         price:400,
         stock:120,
-        img:Sunami
+        img:Sunami,
+        initial:0
     },
     {
         name:'Terracota',
         tipe:'Roll relleno de philadephia y salmon ahumado',
         price:400,
         stock:120,
-        img:philadefia
+        img:philadefia,
+        initial:0
     },
     {
         name:'Mexico',
         tipe:'Roll relleno de philadephia y salmon ahumado',
         price:400,
         stock:120,
-        img:Sunami
+        img:Sunami,
+        initial:0
     },
     {
         name:'Sureste',
         tipe:'Roll relleno de philadephia y salmon ahumado',
         price:400,
         stock:120,
-        img:philadefia
+        img:philadefia,
+        initial:0
     },
     {
         name:'Italian',
         tipe:'Roll relleno de philadephia y salmon ahumado',
         price:400,
         stock:120,
-        img:Sunami
+        img:Sunami,
+        initial:0
     },
     {
         name:'Aconcagua',
         tipe:'Roll relleno de philadephia y salmon ahumado',
         price:400,
-        stock:120,
-        img:philadefia
+        stock:12,
+        img:philadefia,
+        initial:0
     }
 ];
 
