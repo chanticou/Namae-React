@@ -1,8 +1,6 @@
 import React from 'react';
 import Products from './Products'
 
-
-
 import CartWidget from './CartWidget'
 
 class SearchArea extends React.Component {
@@ -32,11 +30,6 @@ class SearchArea extends React.Component {
         }
 
 
-
-
-
-        
-
         //en el imput de mi formulario es dodne voy a usar el estado, 
         //ya que es dodne el usuario escribiria
         render(){
@@ -55,24 +48,25 @@ class SearchArea extends React.Component {
                          </input>
 
                         </label>
-                        <button>SEARCH</button><CartWidget />
+                      <CartWidget />
                     </form>
-                
 
-                    {
-                        this.state.cards.map((objeto,index) => (
-                          <Products
-                            key={index}
-                            img={objeto.img}
-                            name={objeto.name}
-                            description={objeto.description}
-                            stock={objeto.stock}
-                            price={objeto.price}
-                          />
-                        ))
+
+                    // {
+                    //     this.state.cards.map((objeto,index) => (
+                    //       <Products
+                    //         key={index}
+                    //         img={objeto.img}
+                    //         name={objeto.name}
+                    //         description={objeto.description}
+                    //         stock={objeto.stock}
+                    //         price={objeto.price}
+                    //       />
+                    //     ))
                   
-                      }
+                    }
 
+      
 
 
                 </div>

@@ -1,6 +1,5 @@
 // IMPORTAR USESTATE PARA PODER USARLO 
 import { useState } from "react";
-import CartWidget from "./CartWidget";
 
 
 const Products = ({name, description, price, stock, img}) =>{
@@ -23,22 +22,22 @@ const Products = ({name, description, price, stock, img}) =>{
     //FUNCIONES
     const sumar=()=>{
         //setcontador => metodo ASINCRONO => metodo que cambia el estado es Asincrono
-        if(contador >= stock){
-            setSinStock(true)
-           
-   
-        }else{
+        if(contador < stock){
             setcontador(contador + 1)
+    
+        
+        }else{
+            setSinStock(true)
       
         }
-    
-
     }
+
 
     const restar =()=>{
         if(contador > 0) {
         setcontador(contador-1)
-    }
+        setSinStock(false)
+        }
     
     }
 
@@ -54,7 +53,6 @@ const Products = ({name, description, price, stock, img}) =>{
     //RETURN
     return(
     <>
-
         <div className='productsContainer'>
             <div className='content-img'>
                 <img src={img} alt='philadefia' ></img>
@@ -78,11 +76,11 @@ const Products = ({name, description, price, stock, img}) =>{
             
     
             <button disabled={sinStock}>comprar</button>
+
             
         </div>
 
 
-        <CartWidget />
 
     </>
     )

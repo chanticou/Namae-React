@@ -6,7 +6,7 @@ import data from './data'
 import Creditos from './Creditos';
 import ItemListContainer from './ItemListContainer';
 import Main from './Main'
-
+import Promise from './Promise'
 import SearchArea from './SearchArea'
 
 
@@ -24,8 +24,7 @@ function App() {
 
     <SearchArea  cards={data}/>
 
-
-
+    
 
     <Creditos /> 
 </>
