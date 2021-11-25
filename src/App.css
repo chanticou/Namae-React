@@ -1,11 +1,28 @@
-.content-title{
-  color: aqua;
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: 'Roboto', sans-serif;
 }
+
+a{
+  text-decoration:none;
+}
+
+
+.content-navBar{
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow:inset 0 0 15px rgba(100, 100, 100, 0.295);
+}
+
 
 .content-body{
   color:red;
 }
-
 
 
 /* UL */
@@ -15,6 +32,8 @@
   align-items: center;
   width: 100%;
   height: auto;
+  padding-inline-start: 0;
+  
 
 }
 .ul , li{
@@ -36,19 +55,12 @@ li:hover{
 
 
 
-/* CONTENT IMAGE MAIN */
-.content-img-main{
-  background-position:bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  max-width: 100%;
+
+
+.image-main{
+  width:100%;
   height: auto;
-  background-attachment: fixed;
-  display: flex;
-
 }
-
 
 
 /* PRESENTACION ABAJO DE IMAGEN PRINCIPAL  */
@@ -56,18 +68,21 @@ li:hover{
   display: flex;
   justify-content: center;
   text-align: justify;
+  flex-direction: column;
+  align-items: center;
 }
 
 .productsContainer{
-  width: 30%;
-  height: auto;
+  width: 300px;
+  height: 600px;
   display: flex;
   flex-direction: column;
-align-items: center;
-justify-content: space-around;
-border: 1px solid black ;
-margin-top:50px;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid black ;
+  margin-top:50px;
 }
+
 
 
 
@@ -102,4 +117,84 @@ margin-top:50px;
   background-color: black;
   opacity:.8;
   color:white;
+}
+
+
+.content-button{
+  display:flex;
+  width: 150px;
+  justify-content: space-evenly;
+}
+
+.quantity{
+  flex-grow: 3;
+  vertical-align: middle;
+  width: 51px;
+  background: red;
+}
+
+.buttonBuy{
+  display: flex;
+  margin-top: 20px;;
+}
+
+
+
+/* content main */
+
+.contentMain{
+  display:flex;
+  justify-content: center;
+
+  width:100%;
+  height: auto;
+  min-width: 100%;
+   background-color: rgb(221, 221, 221);
+
+}
+
+.contentInfo{
+  width:80%;
+  margin-top:3rem;
+}
+.contentInfo p:first-child{
+  margin-bottom: 3rem;
+}
+
+.contentInfo p, 
+.contentInfo h3{
+  text-align: center;
+}
+
+.contentInfo h3{
+  margin-top:1rem;
+}
+
+.content-img-main{
+  position: relative;
+  color:#fff;
+  text-align: center;
+  box-shadow: rgb(0, 0,0,.5);
+  width:100vw;
+  height: 90vh;
+  background-image: url('./assets/img/sushiMain.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+
+.palitosSushi{
+ position:relative;
+ right:0;
+ width:40%;
+}
+
+.frase-imagen{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-size: 2em;
 }

@@ -1,7 +1,10 @@
 import React from 'react';
-import Products from './Products'
-
+import Products from './Item'
+import products  from './utils/products';
 import CartWidget from './CartWidget'
+
+
+
 
 class SearchArea extends React.Component {
         constructor(props) {
@@ -9,10 +12,14 @@ class SearchArea extends React.Component {
             //Estado dentro de un componente de clase
             //Siemrpe los estados son objetos y tienen la propiedade keyword, que es la propiedad que voy a buscar
             //ese estado va a ir cambiando
+
+
             this.state = {
                 keyword: '',
                 cards:this.props.cards
             }
+
+            
 
             this.submitHandler = this.submitHandler.bind(this)
         }
@@ -52,22 +59,22 @@ class SearchArea extends React.Component {
                     </form>
 
 
-                    // {
-                    //     this.state.cards.map((objeto,index) => (
-                    //       <Products
-                    //         key={index}
-                    //         img={objeto.img}
-                    //         name={objeto.name}
-                    //         description={objeto.description}
-                    //         stock={objeto.stock}
-                    //         price={objeto.price}
-                    //       />
-                    //     ))
-                  
+                    {
+                        this.state.cards.map((objeto,index) => (
+                          <Products
+                            key={index}
+                            img={objeto.img}
+                            name={objeto.name}
+                            description={objeto.description}
+                            stock={objeto.stock}
+                            price={objeto.price}
+                          />
+                        ))
                     }
+       
 
-      
 
+                    
 
                 </div>
             )

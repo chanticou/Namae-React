@@ -1,5 +1,5 @@
-// COMPONENTE CON EL CART
 
+// COMPONENTE CON EL CART
 import cart from '../src/assets/img/cart.png'
 
 
