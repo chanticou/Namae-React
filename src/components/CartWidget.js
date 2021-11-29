@@ -1,6 +1,6 @@
 
 // COMPONENTE CON EL CART
-import cart from '../src/assets/img/cart.png'
+import cart from '../assets/img/cart.png'
 
 
 

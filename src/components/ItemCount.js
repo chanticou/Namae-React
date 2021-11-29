@@ -58,10 +58,7 @@ import { useParams } from 'react-router';
 const ItemCount = () => {
     
     const { stock } = useParams();
-    
     const [datos,setdatos] =useState(stock)
-    
- 
     const[sinStock, setSinStock] = useState(false)   
 
     //contador
@@ -98,16 +95,14 @@ const ItemCount = () => {
 
     return (
         <>
-
-
-        <div className='productsContainer'>
+    
             <div className='content-button'>
                 <button onClick={restar}> -  </button>
                 <span className='quiantity'>{contador}</span>
                 <button onClick={sumar}>  + </button>
             </div>
             <button className='buttonBuy' disabled={sinStock}>comprar</button>
-        </div>
+        
 
     </>
     )

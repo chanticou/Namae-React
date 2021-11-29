@@ -1,6 +1,4 @@
 import React from 'react';
-import Products from './Item'
-import products  from './utils/products';
 import CartWidget from './CartWidget'
 
 
@@ -55,30 +53,30 @@ class SearchArea extends React.Component {
                          </input>
 
                         </label>
-                      <CartWidget />
+            
                     </form>
 
-
-                    {
-                        this.state.cards.map((objeto,index) => (
-                          <Products
-                            key={index}
-                            img={objeto.img}
-                            name={objeto.name}
-                            description={objeto.description}
-                            stock={objeto.stock}
-                            price={objeto.price}
-                          />
-                        ))
-                    }
-       
-
-
+                    
+                    
+                    
                     
 
                 </div>
-            )
+                    )
         }
 }
 
 export  default SearchArea;
+
+                    // {
+                    //     this.state.cards.map((objeto,index) => (
+                    //       <Products
+                    //         key={index}
+                    //         img={objeto.img}
+                    //         name={objeto.name}
+                    //         description={objeto.description}
+                    //         stock={objeto.stock}
+                    //         price={objeto.price}
+                    //       />
+                    //     ))
+                    // }

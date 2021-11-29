@@ -1,5 +1,5 @@
-import philadefia from '../assets/img/philadefia.jpg'
-import Sunami from '../assets/img/Sunami.jpg'
+import sushiUno from '../assets/img/sushi-1.png'
+
 
 
 
@@ -11,7 +11,7 @@ const products = [
         price:400,
         stock:20,
         idCategory:8,
-        img:philadefia,
+        img:sushiUno,
 
     },
     {
@@ -21,7 +21,7 @@ const products = [
         price:400,
         stock:10,
         idCategory:6,
-        img:Sunami,
+        img:sushiUno,
 
     },
     {
@@ -31,7 +31,7 @@ const products = [
         price:400,
         stock:3,
         idCategory:3,
-        img:philadefia,
+        img:sushiUno,
 
     },
     {
@@ -41,7 +41,7 @@ const products = [
         price:400,
         stock:10,
         idCategory:8,
-        img:Sunami,
+        img:sushiUno,
 
     },
     {
@@ -51,7 +51,7 @@ const products = [
         price:400,
         stock:120,
         idCategory:3,
-        img:philadefia,
+        img:sushiUno,
 
     },
     {
@@ -61,7 +61,7 @@ const products = [
         price:400,
         stock:120,
         idCategory:6,
-        img:Sunami,
+        img:sushiUno,
 
     },
     {
@@ -71,7 +71,7 @@ const products = [
         price:400,
         stock:12,
         idCategory:10,
-        img:philadefia,
+        img:sushiUno,
 
     }
 ];

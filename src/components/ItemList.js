@@ -1,17 +1,20 @@
-// import Item from './Item'
-// import { ProductsContainer } from './styledComponents';
-
-// const ItemList = ({ items }) =>{
-//     return(
-//         <ProductsContainer>
-//         {
-//             items.length > 0
-//             ? items.map(item => <Item key={item.id} id={item.id} title={item.title} price={item.price} img={item.img}/>)
-//             : <p>Cargando...</p>
-//         }
-//         </ProductsContainer>
-//     )
-// }
+import Item from './Item'
 
 
-// export default ItemList;
+
+const  ItemList=({items})=>{
+    return (
+        <>
+        {
+            items.length > 0
+            ?items.map((item=><Item id={item.id} idCategory={item.idCategory} name={item.name} description={item.description} stock={item.stock} price={item.price}  img={item.img} />))
+            :<p>Cargando...</p> 
+        }
+        </>
+    )
+}
+
+
+export default ItemList ;
+
+
