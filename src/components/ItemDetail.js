@@ -5,7 +5,7 @@ const ItemDetail = ({ item }) => {
     // const onAdd = (qty) => {
     //     alert("You have selected " + qty + " items.");
     // }
-    console.log('SOY ITEM',item)
+ 
     return (
         <>    
         <div className='productsContainer'>
@@ -17,7 +17,7 @@ const ItemDetail = ({ item }) => {
             <h4>Stock:{item.stock}</h4>
             <h3>Price:$ {item.price}</h3>
             : <p>Cargando...</p>
-        
+        <ItemCount />
         </div>
         </>
     );

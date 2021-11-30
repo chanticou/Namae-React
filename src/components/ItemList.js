@@ -7,7 +7,7 @@ const  ItemList=({items})=>{
         <>
         {
             items.length > 0
-            ?items.map((item=><Item id={item.id} idCategory={item.idCategory} name={item.name} description={item.description} stock={item.stock} price={item.price}  img={item.img} />))
+            ? <div className='contentMainCards'>{items.map((item=><Item key={item.id} id={item.id} idCategory={item.idCategory} name={item.name} description={item.description} stock={item.stock} price={item.price}  img={item.img} />))}</div>
             :<p>Cargando...</p> 
         }
         </>

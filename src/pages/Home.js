@@ -5,20 +5,16 @@ import StickySearchCart from '../components/StickySearchCart'
 import ItemDetailContainer from '../components/ItemDetailContainer'
 //Muestra los productos
 import ItemListContainer from '../components/ItemListContainer'
+import NavBar from '../components/NavBar'
 
 
-const NavBar = () =>{
+const Home = () =>{
 
   return(
-      <BrowserRouter>   
-          <div className='content-navBar'>
-            <ul className='ul'>
-                <li><Link to='/'>HOME</Link></li>
-                <li><Link to='/menu'>MENU</Link></li>
-                <li><Link to='/menu/:idCategory'></Link></li>
-                <li><Link to='aboutUs'>CONTACTO</Link></li>
-            </ul>
-          </div>
+    <BrowserRouter>  
+
+      <NavBar />
+
       <Switch>                
           <Route exact path='/'>
             <Main />
@@ -48,7 +44,7 @@ const NavBar = () =>{
   )
 }
     
-  export default NavBar;
+  export default Home;
 
 
 

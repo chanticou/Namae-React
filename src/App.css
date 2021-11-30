@@ -49,8 +49,6 @@ li:hover{
 .img-cart{
   width: 50px;
   height: 50px;;
-  margin-left: 150px;
-
 }
 
 
@@ -81,7 +79,7 @@ li:hover{
   display: flex;
   margin:auto;
   flex-direction: column;
-  margin:50px 50px;
+  margin:30px 0;
 
 
 }
@@ -199,7 +197,6 @@ li:hover{
   flex-direction: row;
   position: sticky;
   top: 0;
-  z-index: 1000;
   background-color: #fff;
   align-items: center;
   justify-content: center;
@@ -208,13 +205,8 @@ li:hover{
 
 
 /* MIS PRODUCTOS RENDERIZADOS */
-.content-img{
-  width: 500px;
-  height: 400px;
-  display: flex;
-  margin-top:50px;
-  opacity:1;
-}
+
+
 /* .description-content{
   width: 500px;
   height: 400px;
@@ -237,3 +229,45 @@ li:hover{
 
 }
  */
+
+
+.contentMainCards{
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(325px,1fr));
+  grid-auto-rows: minmax(auto, auto);
+  gap: 20px;
+  padding: 20px;
+  grid-auto-flow: dense;
+}
+
+ .productsContainer{
+  width:325px;
+  height:100%;
+  border:1px solid #ffb387;
+  border-radius: 15px;
+  margin-bottom: 50px;
+ }
+
+.productsContainer p {
+  text-align: center;
+}
+
+ .product__img{
+   width:100%;
+   height: auto;
+ }
+
+ .product__description{
+   transition:all 350ms ease-out;
+   padding: 30px;
+ }
+
+ .productsContainer h3{
+    text-align: center;
+ }
+
+ .productsContainer > button{
+   display: block;
+   margin-inline:auto;
+ }
