@@ -1,5 +1,11 @@
 import sushiUno from '../assets/img/sushi-1.png'
-
+import sushiDos from '../assets/img/sushi-2-caliente.png'
+import sushiTres from '../assets/img/sushi-4.png'
+import sushiCuatro from '../assets/img/sushi-5.png'
+import sushiCinco from '../assets/img/sushi-6.png'
+import sushiSeis from '../assets/img/sushi-7.png'
+import sushiSiete from '../assets/img/sushi-8.png'
+import sushiOcho from '../assets/img/sushi-10.png'
 
 
 
@@ -21,7 +27,7 @@ const products = [
         price:400,
         stock:10,
         idCategory:6,
-        img:sushiUno,
+        img:sushiDos,
 
     },
     {
@@ -31,7 +37,7 @@ const products = [
         price:400,
         stock:3,
         idCategory:3,
-        img:sushiUno,
+        img:sushiTres,
 
     },
     {
@@ -41,7 +47,7 @@ const products = [
         price:400,
         stock:10,
         idCategory:8,
-        img:sushiUno,
+        img:sushiCuatro,
 
     },
     {
@@ -51,7 +57,7 @@ const products = [
         price:400,
         stock:120,
         idCategory:3,
-        img:sushiUno,
+        img:sushiCinco,
 
     },
     {
@@ -61,7 +67,7 @@ const products = [
         price:400,
         stock:120,
         idCategory:6,
-        img:sushiUno,
+        img:sushiSeis,
 
     },
     {
@@ -71,7 +77,17 @@ const products = [
         price:400,
         stock:12,
         idCategory:10,
-        img:sushiUno,
+        img:sushiSiete,
+
+    },
+    {
+        id:8,
+        name:'Tentacion',
+        description:'Roll relleno de philadephia y salmon ahumado',
+        price:480,
+        stock:8,
+        idCategory:8,
+        img:sushiOcho,
 
     }
 ];

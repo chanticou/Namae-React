@@ -2,6 +2,7 @@ import ItemCount from './ItemCount';
 
 
 const ItemDetail = ({ item }) => {
+
     // const onAdd = (qty) => {
     //     alert("You have selected " + qty + " items.");
     // }
@@ -9,18 +10,25 @@ const ItemDetail = ({ item }) => {
     return (
         <>    
         <div className='productsContainer'>
-            <img src={item.img} alt='name'></img>
-            <h3>{item.name}</h3>
-            <h3>{item.id}</h3>
-            <h4>{item.description}</h4>
-            <h4>Category:{item.idCategory}</h4>
-            <h4>Stock:{item.stock}</h4>
-            <h3>Price:$ {item.price}</h3>
-            : <p>Cargando...</p>
-        <ItemCount />
+            <img className='product__img' src={item.img} alt='philadefia' ></img>
+            <div>           
+                <h3 className='product__title'>{item.name}</h3>            
+                <p>{item.description}</p>
+                <p>Category:{item.idCategory}</p>
+                <h3 className='product__price'>Price:$ {item.price}</h3>
+                <h3>Stock:{item.stock}</h3>
+                        
+                <div className='itemCount'>
+                    <ItemCount />
+                </div>
+            </div>
         </div>
+                   
+                    
         </>
     );
 }
-
+                
 export default ItemDetail;
+                // <p>Stock:{item.stock}</p>
+                // <ItemCount stock={stock}/>

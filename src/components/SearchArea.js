@@ -1,8 +1,5 @@
 import React from 'react';
-import CartWidget from './CartWidget'
-import ItemCount from '../components/ItemCount'
-
-
+import ItemCount from './ItemCount';
 
 
 class SearchArea extends React.Component {
@@ -48,11 +45,8 @@ class SearchArea extends React.Component {
                     </label>             
                 </form>
             </div>             
-        
-            )
-
+        )
     }
-
 }
 
 export  default SearchArea;

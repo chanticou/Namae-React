@@ -242,19 +242,21 @@ li:hover{
 }
 
  .productsContainer{
-  width:325px;
-  height:100%;
-  border:1px solid #ffb387;
-  border-radius: 15px;
+  width: 355px;
+  height: 100%;
   margin-bottom: 50px;
- }
 
+ }
+ .productsContainer> div{
+   flex-direction: column;
+   margin: auto;
+ }
 .productsContainer p {
   text-align: center;
 }
 
  .product__img{
-   width:100%;
+   width:90%;
    height: auto;
  }
 
@@ -270,4 +272,18 @@ li:hover{
  .productsContainer > button{
    display: block;
    margin-inline:auto;
+ }
+
+
+ .detailsButton{
+  display: block;
+  margin-inline: auto;
+  margin-top:10px;
+ }
+
+
+ .itemCount{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top:10px;
  }
