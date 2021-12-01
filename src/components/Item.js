@@ -12,8 +12,9 @@ const Item = ({id, name, img, stock}) =>{
         <h3 className='product__title'>{name}</h3>            
         <button className='detailsButton'><Link to={`/item/${id}`}>Details</Link></button>  
         </div>
-    </>
-    )
+        </>
+        )
+
 } 
     
     

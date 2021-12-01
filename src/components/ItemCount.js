@@ -2,10 +2,8 @@
 import { useState } from 'react';
 
 const ItemCount = ({stock}) => {
-    console.log(stock)
-    // const [datos,setdatos] =useState(stock)
-    // const[stock, setStock] = useState(true)   
-    
+  
+    console.log(stock,'SOY EL STOCK')
     //contador
     //usestate(0)=> me va a devolver un array, y decir cual es el valor inicial que contiene el estado
     //ese arreglo va a contener dos valores, el primero es el valor que contiene el estado (en este caso 0)
@@ -15,13 +13,13 @@ const ItemCount = ({stock}) => {
     
     //FUNCIONES
     const sumar=()=>{
-        //setcontador => metodo ASINCRONO => metodo que cambia el estado es Asincrono
-        // if(contador < stock){
+        // setcontador => metodo ASINCRONO => metodo que cambia el estado es Asincrono
+        if(contador < stock){
             setcontador(contador + 1)
             
-        // }else{
-        //     console.log('else')
-        // }
+        }else{
+            console.log('else')
+        }
     }
     
     
@@ -36,15 +34,11 @@ const ItemCount = ({stock}) => {
     
     return (
         <>
-
         <div className='content-button'>
         <button onClick={restar}> -  </button>
         <span className='quiantity'>{contador}</span>
         <button onClick={sumar}>  + </button>
         </div>
-
-        
-
     </>
     )
 
