@@ -6,7 +6,7 @@ import ItemDetailContainer from '../components/ItemDetailContainer'
 //Muestra los productos
 import ItemListContainer from '../components/ItemListContainer'
 import NavBar from '../components/NavBar'
-
+import Cart from '../components/Cart'
 
 const Home = () =>{
 
@@ -16,27 +16,38 @@ const Home = () =>{
       <NavBar />
 
       <Switch>                
-          <Route exact path='/'>
-            <Main />
-          </Route>
-          
-          <Route exact path='/menu'>
-              <StickySearchCart />
-              <ItemListContainer />
-          </Route>
+        <Route exact path='/'>
+          <Main />
+        </Route>
+        
+        <Route exact path='/menu'>
+            <StickySearchCart />
+            <ItemListContainer />
+        </Route>
 
-          <Route exact path='/menu/:idCategory'>
-              <ItemListContainer />
-          </Route>
-                    
-          <Route exact path='/item/:idItem'>
-            <ItemDetailContainer />
-          </Route>
-          
-          <Route exact path='/aboutUs'>
-          <p>SOY EL ABOUT US</p>
-          </Route>
-          
+        <Route exact path='/woks/:idCategory'>
+            <ItemListContainer />
+        </Route>
+        <Route exact path='/rolls/:idCategory'>
+          <ItemListContainer />
+        </Route>
+
+        <Route exact path='/dimsun/:idCategory'>
+          <ItemListContainer />
+        </Route>
+                  
+        <Route exact path='/item/:idItem'>
+          <ItemDetailContainer />
+        </Route>
+        
+        <Route exact path='/aboutUs'>
+        <p>SOY EL ABOUT US</p>
+        </Route>
+
+        <Route exact path='/cart'>
+          <Cart />
+        </Route>
+
           
       </Switch>
 

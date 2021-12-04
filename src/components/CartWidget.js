@@ -11,7 +11,9 @@ const cartButton=()=>{
 
 const CartWidget = () =>{
     return(
-        <img onClick={cartButton} className='img-cart' src={cart} alt='Cart'></img>
+  
+            <img onClick={cartButton} className='img-cart' src={cart} alt='Cart'></img>
+
     )
 }
 

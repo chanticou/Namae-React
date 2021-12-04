@@ -6,18 +6,25 @@ import sushiCinco from '../assets/img/sushi-6.png'
 import sushiSeis from '../assets/img/sushi-7.png'
 import sushiSiete from '../assets/img/sushi-8.png'
 import sushiOcho from '../assets/img/sushi-10.png'
+import wok1 from '../assets/img/wok1.png'
+import wok2 from '../assets/img/wok2.png'
+import dimsun1 from '../assets/img/dimsun1.png'
+import dimsun2 from '../assets/img/dimsun2.png'
+import dimsun3 from '../assets/img/dimsun3.png'
+import dimsun4 from '../assets/img/dimsun4.png'
 
+//idCategory:8=woks
 
 
 const products = [
     {
         id:1,
-        name:'Sushi Hawaian',
-        description:'Roll relleno de philadephia y salmon ahumado',
+        name:'Wok Namae',
+        description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
         price:400,
-        stock:20,
-        idCategory:8,
-        img:sushiUno,
+        stock:0,
+        idCategory:2,
+        img:wok1,
 
     },
     {
@@ -26,7 +33,7 @@ const products = [
         description:'Roll de Langostino apanados con',
         price:400,
         stock:10,
-        idCategory:6,
+        idCategory:3,
         img:sushiDos,
 
     },
@@ -46,7 +53,7 @@ const products = [
         description:'Roll relleno de philadephia y salmon ahumado',
         price:400,
         stock:10,
-        idCategory:8,
+        idCategory:3,
         img:sushiCuatro,
 
     },
@@ -66,7 +73,7 @@ const products = [
         description:'Roll relleno de philadephia y salmon ahumado',
         price:400,
         stock:120,
-        idCategory:6,
+        idCategory:3,
         img:sushiSeis,
 
     },
@@ -76,20 +83,84 @@ const products = [
         description:'Roll relleno de philadephia y salmon ahumado',
         price:400,
         stock:12,
-        idCategory:10,
+        idCategory:3,
         img:sushiSiete,
 
     },
     {
         id:8,
-        name:'Tentacion',
-        description:'Roll relleno de philadephia y salmon ahumado',
+        name:'Wok Tentacion',
+        description:'Fideos de arroz con pollo, vegetales y salsa teriaky',
         price:480,
         stock:8,
-        idCategory:8,
-        img:sushiOcho,
+        idCategory:2,
+        img:wok2,
 
-    }
+    },
+    {
+        id:9,
+        name:'Italian',
+        description:'Roll relleno de philadephia y salmon ahumado',
+        price:400,
+        stock:120,
+        idCategory:3,
+        img:sushiSeis,
+
+    },
+    {
+        id:10,
+        name:'Wok Namae',
+        description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
+        price:400,
+        stock:0,
+        idCategory:3,
+        img:sushiUno,
+    },
+    {
+        id:11,
+        name:'Wok Namae',
+        description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
+        price:400,
+        stock:0,
+        idCategory:3,
+        img:sushiOcho,
+    },
+    {
+        id:12,
+        name:'Wok Namae',
+        description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
+        price:400,
+        stock:0,
+        idCategory:5,
+        img:dimsun1,
+    },
+    {
+        id:13,
+        name:'Wok Namae',
+        description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
+        price:400,
+        stock:0,
+        idCategory:5,
+        img:dimsun2,
+    },
+    {
+        id:13,
+        name:'Wok Namae',
+        description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
+        price:400,
+        stock:0,
+        idCategory:5,
+        img:dimsun3,
+    },
+    {
+        id:13,
+        name:'Wok Namae',
+        description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
+        price:400,
+        stock:0,
+        idCategory:5,
+        img:dimsun4,
+    },
 ];
 
 export default products;
