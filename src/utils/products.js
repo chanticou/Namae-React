@@ -144,7 +144,7 @@ const products = [
         img:dimsun2,
     },
     {
-        id:13,
+        id:14,
         name:'Wok Namae',
         description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
         price:400,
@@ -153,7 +153,7 @@ const products = [
         img:dimsun3,
     },
     {
-        id:13,
+        id:15,
         name:'Wok Namae',
         description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
         price:400,

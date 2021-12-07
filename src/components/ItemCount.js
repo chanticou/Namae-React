@@ -14,7 +14,7 @@ const ItemCount = ({stock, onAdd}) => {
     
     const [contador, setcontador] = useState(0)
     const test = useContext(CartContext)
-    console.log(test, 'ITEMCOUNT')
+
     //FUNCIONES
     const sumar=()=>{
         // setcontador => metodo ASINCRONO => metodo que cambia el estado es Asincrono

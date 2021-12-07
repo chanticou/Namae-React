@@ -11,6 +11,7 @@ const CartContextProvider = ({children}) =>{
     const addToCart = (item, qty) =>{
         
         setCartList([
+            ...cartList,
             {
                 imgItem:item.img,
                 idItem: item.id,
@@ -19,7 +20,9 @@ const CartContextProvider = ({children}) =>{
                 descriptionItem:item.description,
                 qtyItems:qty
             }
+
         ])
+       
         
     }
 

@@ -4,21 +4,17 @@ import customFetch from '../utils/customFetch'
 import { useEffect , useState } from 'react'
 import { useParams } from 'react-router'
 import products from '../utils/products'
-// const { products } = require('../utils/products')
-console.log(products)
+
 const ItemListContainer = () =>{
     //ESTADOS
     //Este estado va a cargar todos los productos
     const [datos, setDatos]  = useState([]);
     //capturamos el parametro idCategory
     const { idCategory } = useParams();
-    
-    console.log(idCategory)
 
     //componente diupdate
     useEffect(() => {
         customFetch(2000, products.filter(item => {
-            console.log(item)
             //si idCategory es indefinido que me retorna todos los productos = item
             if(idCategory === undefined){           
                 return item;
