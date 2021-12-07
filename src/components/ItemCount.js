@@ -1,7 +1,8 @@
-
 import { useState } from 'react';
-import CartWidget  from './CartWidget';
-import { Link } from 'react-router-dom'
+
+import { useContext } from 'react'
+import { CartContext } from '../components/CartContext'
+
 
 
 const ItemCount = ({stock, onAdd}) => {
@@ -12,7 +13,8 @@ const ItemCount = ({stock, onAdd}) => {
     //El segundo valor es una funcion, que permite actualizar el estado, va a reemplazar el estado anterior
     
     const [contador, setcontador] = useState(0)
-    
+    const test = useContext(CartContext)
+    console.log(test, 'ITEMCOUNT')
     //FUNCIONES
     const sumar=()=>{
         // setcontador => metodo ASINCRONO => metodo que cambia el estado es Asincrono

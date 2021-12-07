@@ -1,12 +1,34 @@
+import { useContext } from 'react'
+import { CartContext } from '../components/CartContext'
 
-
-
-
+//El componente carrito va a tener acceso a cartContext
 const Cart = () =>{
+
+    const test = useContext(CartContext)
+    console.log(test)
+
+
     return(
-        <h1>SOY EL CART</h1>
+        <>
+    {
+       test.cartList.map(item=>
+        <div className='productsContainer'>
+        <img className='product__img' src={item.imgItem} alt='philadefia' ></img>
+        <h3 className='product__title'>{item.nameItem}</h3>
+        <h3 className='product__title'>{item.descriptionItem}</h3>  
+        <h3 className='product__title'>Cantidad: {item.qtyItems}</h3>
+        <h3 className='product__price'>Precio:$ {item.priceItem}</h3>        
+        </div>
+        )
+    }
+    </>
     )
 }
 
 
-export default Cart
+export default Cart;
+// test.cartList.length > 0 ?
+// test.cartList.map(item=>
+//     {item.nameItem}    
+// )
+// <button className='detailsButton'><Link to={`/item/${id}`}>Details</Link></button>  

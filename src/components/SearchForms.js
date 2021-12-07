@@ -5,7 +5,7 @@ const SearchForm = () =>{
 
     const vocales=['a','e','i','o','u']
     
-    const inputEvent=(e)=>{
+    const handleChange=(e)=>{
         vocales.forEach((vocal)=>{
             if(e.key === vocal){
                 e.preventDefault()
@@ -23,7 +23,7 @@ const SearchForm = () =>{
     }
     return(
         <form>
-            <input onKeyDown={inputEvent} placeholder='BUSCADOR...'></input>
+            <input onChange={handleChange} placeholder='BUSCADOR...'></input>
         </form>
     )
 }
