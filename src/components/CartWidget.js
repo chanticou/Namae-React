@@ -4,16 +4,13 @@ import cart from '../assets/img/cart.png'
 
 
 
-const cartButton=()=>{
-   <div>ACA VA MI POPUP</div>
-}
 
 
-const CartWidget = () =>{
+const CartWidget = ({ contador }) =>{
     return(
-  
-            <img onClick={cartButton} className='img-cart' src={cart} alt='Cart'></img>
-
+        <>
+        <img className='img-cart' src={cart} alt='Cart'></img><span>{contador}</span>
+        </>
     )
 }
 

@@ -300,10 +300,12 @@ li:hover{
 }
 
 
-/* lupa */
-/* .lupa{
-  width:5%;
-  height: 5%;
-display:flex;
-justify-content: flex-end;
-} */
+.contentTotal{
+  display:flex;
+  margin-top: 50px;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+}

@@ -6,36 +6,54 @@ import { Link } from 'react-router-dom'
 const Cart = () =>{
 
     const test = useContext(CartContext)
-    console.log(test)
 
 
-    return(
-        <>
-    {
+   
 
-        test.cartList.length > 0 ?
-       test.cartList.map(item=>
-        <div className='productsContainer'>
-            <img className='product__img' src={item.imgItem} alt='philadefia' ></img>
-            <h3 className='product__title'>{item.nameItem}</h3>
-            <h3 className='product__title'>{item.descriptionItem}</h3>  
-            <h3 className='product__title'>Cantidad: {item.qtyItems}</h3>
-            <h3 className='product__price'>Precio:$ {item.priceItem}</h3>        
-        </div>
-        )
-        :<div>
-            <h1>NO HAY PRODUCTOS</h1>
-            <button><Link to='/menu'>Voler al menu</Link></button>
-        </div>
-    }
-    </>
+
+
+return(
+    <>
+
+    
+{
+
+    test.cartList.length > 0 ?
+    test.cartList.map(item=>
+        <table>
+        key={item.idItem}
+            <tr>
+                <td>
+                    <img className='product__img' src={item.imgItem} alt='philadefia' ></img>
+                </td>
+        
+                <td>
+                    <h3>{item.nameItem}</h3>
+                    <h3>{item.descriptionItem}</h3>
+                    <h3>Cantidad: {item.qtyItems}</h3>
+                    <h3>Precio unidad: {item.priceItem}</h3> 
+                    <h3>Precio: $ {test.calcularTotalPorItem(item.idItem) }</h3>
+                    <button onClick={()=>test.deleteItem(item.idItem) }>ELIMINAR PRODUCTO</button>
+                </td>        
+            </tr>
+         
+        </table>
+
+        
     )
+    
+    :<div>
+        <h1>NO HAY PRODUCTOS</h1>
+    </div>
+}
+<div className='contentTotal'>
+<h2>Total: $ {test.calcSubTotal()}</h2>
+<button onClick={test.removeProductsCart}>BORRAR CARRITO</button>
+<button><Link to='/menu'>Voler al menu</Link></button>
+</div>
+</>
+)
 }
 
 
 export default Cart;
-// test.cartList.length > 0 ?
-// test.cartList.map(item=>
-//     {item.nameItem}    
-// )
-// <button className='detailsButton'><Link to={`/item/${id}`}>Details</Link></button>  

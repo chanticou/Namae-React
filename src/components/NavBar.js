@@ -1,13 +1,15 @@
 
 import { Link } from 'react-router-dom'
-import SearchArea from './SearchArea';
 import SearchForm from '../components/SearchForms'
 import CartWidget  from './CartWidget';
 
 
+
 const NavBar = ()=>{
+
+
     return(
-      
+   
         <div className='content-navBar'>
             <ul className='ul'>
                 <li><Link to='/'>HOME</Link></li>                    
