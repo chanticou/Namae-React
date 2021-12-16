@@ -4,14 +4,7 @@ import { Link } from 'react-router-dom'
 
 //El componente carrito va a tener acceso a cartContext
 const Cart = () =>{
-
     const test = useContext(CartContext)
-
-
-   
-
-
-
 return(
     <>
 
@@ -21,7 +14,7 @@ return(
     test.cartList.length > 0 ?
     test.cartList.map(item=>
         <table>
-        key={item.idItem}
+      
             <tr>
                 <td>
                     <img className='product__img' src={item.imgItem} alt='philadefia' ></img>
@@ -38,10 +31,7 @@ return(
             </tr>
          
         </table>
-
-        
     )
-    
     :<div>
         <h1>NO HAY PRODUCTOS</h1>
     </div>

@@ -1,9 +1,10 @@
-import ItemCount from '../components/ItemCount'
+// import ItemCount from '../components/ItemCount'
 import ItemList from '../components/ItemList'
-import customFetch from '../utils/customFetch'
+// import customFetch from '../utils/customFetch'
 import { useEffect , useState } from 'react'
 import { useParams } from 'react-router'
-import products from '../utils/products'
+import fireStoreFetch from '../utils/firestoreFetch'
+
 
 const ItemListContainer = () =>{
     //ESTADOS
@@ -13,19 +14,11 @@ const ItemListContainer = () =>{
     const { idCategory } = useParams();
 
     //componente diupdate
+    //Quiero obtner los documentos, de la coleccion de la base de datos
     useEffect(() => {
-        customFetch(2000, products.filter(item => {
-            //si idCategory es indefinido que me retorna todos los productos = item
-            if(idCategory === undefined){           
-                return item;
-
-            }else{
-                return item.idCategory === parseInt(idCategory)
-            }
-        }))
+        fireStoreFetch()
             .then(result => setDatos(result))
-            .catch(err=> console.log(err))  
-
+            .catch(err => console.log(err))
     },[idCategory]);
 
     // const onAdd = (qty) =>{
@@ -43,3 +36,18 @@ const ItemListContainer = () =>{
 
 
 export default ItemListContainer;
+
+
+
+
+// customFetch(2000, products.filter(item => {
+//     //si idCategory es indefinido que me retorna todos los productos = item
+//     if(idCategory === undefined){           
+//         return item;
+
+//     }else{
+//         return item.idCategory === parseInt(idCategory)
+//     }
+// }))
+//     .then(result => setDatos(result))
+//     .catch(err=> console.log(err))  

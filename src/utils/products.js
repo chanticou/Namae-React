@@ -160,7 +160,66 @@ const products = [
         stock:8,
         idCategory:5,
         img:dimsun4,
+    },   
+    {
+        id:16,
+        name:'Wok Namae',
+        description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
+        price:480,
+        stock:15,
+        idCategory:5,
+        img:dimsun1,
     },
+    {
+        id:17,
+        name:'Wok Namae',
+        description:'Salteado de langostinos ahumados, arroz bomba, vegetales y salsa nostra ',
+        price:480,
+        stock:15,
+        idCategory:5,
+        img:dimsun1,
+    },
+    {
+        id:18,
+        name:'Wok Tentacion',
+        description:'Fideos de arroz con pollo, vegetales y salsa teriaky',
+        price:480,
+        stock:8,
+        idCategory:2,
+        img:wok2,
+
+    },
+    {
+        id:19,
+        name:'Wok Tentacion',
+        description:'Fideos de arroz con pollo, vegetales y salsa teriaky',
+        price:480,
+        stock:8,
+        idCategory:2,
+        img:wok2,
+
+    },
+    {
+        id:20,
+        name:'Wok Tentacion',
+        description:'Fideos de arroz con pollo, vegetales y salsa teriaky',
+        price:480,
+        stock:8,
+        idCategory:2,
+        img:wok2,
+
+    },
+    {
+        id:21,
+        name:'Wok Tentacion',
+        description:'Fideos de arroz con pollo, vegetales y salsa teriaky',
+        price:480,
+        stock:8,
+        idCategory:2,
+        img:wok2,
+
+    },
+
 ];
 
 export default products;

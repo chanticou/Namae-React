@@ -1,7 +1,6 @@
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
-
 import { useContext } from 'react'
 import { CartContext } from '../components/CartContext'
 
@@ -22,22 +21,30 @@ const ItemDetail = ({ item }) => {
     return (
         <>    
 
-        <div className='productsContainer'>
-            <img className='product__img' src={item.img} alt='philadefia' ></img>
-            <div>           
-                <h3 className='product__title'>{item.name}</h3>            
-                <p>{item.description}</p>
-                <p>Category:{item.idCategory}</p>
-                <h3 className='product__price'>Precio:$ {item.price}</h3>
-                <h3>Stock:{item.stock}</h3>
-         
-                <ItemCount stock={item.stock} onAdd={onAdd}/>            
-                
-            </div>
+        <table className='tableItemDetail'>
+            <tr>
+                <td>
+                    <img className='product__img' src={item.img} alt='philadefia' ></img>
+                </td>
+
+                <td>           
+                    <h3 className='product__title'>{item.name}</h3>            
+                    <p>{item.description}</p>
+                    <p>Category:{item.idCategory}</p>
+                    <h3 className='product__price'>Precio:$ {item.price}</h3>
+                    <h3>Stock:{item.stock}</h3>
+            
+                    <ItemCount stock={item.stock} onAdd={onAdd}/>            
+                    
+                </td>
+
+            </tr>
+            
+        </table>     
+        
+        <div className='menu'>     
             <button><Link to='/menu'>Voler al menu</Link></button>
-
-
-        </div>              
+        </div>
         </>
     );
 }

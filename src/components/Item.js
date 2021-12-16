@@ -1,6 +1,4 @@
-// IMPORTAR USESTATE PARA PODER USARLO 
-import { useState } from "react";
-import ItemCount from './ItemCount'
+
 import { Link } from 'react-router-dom'
 
 const Item = ({id, name, img, price, stock }) =>{
