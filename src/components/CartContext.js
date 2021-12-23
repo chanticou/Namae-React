@@ -26,6 +26,7 @@ const CartContextProvider = ({children}) =>{
         }else{
             //Si el producto esta, aumentamos su cantidad
             found.qtyItems += qty;
+            setCartList([...cartList])
         }
       
     }

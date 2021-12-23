@@ -1,6 +1,5 @@
-// import ItemCount from '../components/ItemCount'
+
 import ItemList from '../components/ItemList'
-// import customFetch from '../utils/customFetch'
 import { useEffect , useState } from 'react'
 import { useParams } from 'react-router'
 import fireStoreFetch from '../utils/firestoreFetch'
@@ -13,21 +12,25 @@ const ItemListContainer = () =>{
     //capturamos el parametro idCategory
     const { idCategory } = useParams();
 
-    //componente diupdate
     //Quiero obtner los documentos, de la coleccion de la base de datos
     useEffect(() => {
         fireStoreFetch()
             .then(result => setDatos(result))
             .catch(err => console.log(err))
     },[idCategory]);
-
     // const onAdd = (qty) =>{
     //     alert('seleccionaste' + qty + 'cantidad de items')
     // }
 
+    useEffect(()=>{
+        return(()=>{
+            setDatos([])
+        })
+    }, []);
+
     return(
         <>
-          <ItemList items={datos} />
+          <ItemList items={datos}  category={idCategory}/>
         </>
     )
 
@@ -36,6 +39,46 @@ const ItemListContainer = () =>{
 
 
 export default ItemListContainer;
+
+// import ItemList from '../components/ItemList'
+// import { useEffect , useState } from 'react'
+// import { useParams } from 'react-router'
+// import fireStoreFetch from '../utils/firestoreFetch'
+
+
+// const ItemListContainer = () =>{
+//     //ESTADOS
+//     //Este estado va a cargar todos los productos
+//     const [datos, setDatos]  = useState([]);
+
+//     //capturamos el parametro idCategory
+//     const { idCategory } = useParams();
+
+//     //componente diupdate
+//     //Quiero obtner los documentos, de la coleccion de la base de datos
+//     useEffect(() => {
+//         fireStoreFetch(idCategory)
+//             .then(result => setDatos(result))
+//             .catch(err => console.log(err))  
+//     },[idCategory]);
+ 
+
+//     // const onAdd = (qty) =>{
+//     //     alert('seleccionaste' + qty + 'cantidad de items')
+//     // }
+
+//     return(
+//         <>
+//           <ItemList items={datos} />
+//         </>
+//     )
+          
+// }
+        
+//         //   <ItemCount stock={5} initial={1} onAdd={onAdd} />
+
+
+// export default ItemListContainer;
 
 
 

@@ -7,14 +7,11 @@ const Cart = () =>{
     const test = useContext(CartContext)
 return(
     <>
-
-    
 {
 
     test.cartList.length > 0 ?
     test.cartList.map(item=>
         <table>
-      
             <tr>
                 <td>
                     <img className='product__img' src={item.imgItem} alt='philadefia' ></img>
@@ -32,15 +29,15 @@ return(
          
         </table>
     )
-    :<div>
+    :<div className='contentNoProducts'>
         <h1>NO HAY PRODUCTOS</h1>
     </div>
 }
-<div className='contentTotal'>
-<h2>Total: $ {test.calcSubTotal()}</h2>
-<button onClick={test.removeProductsCart}>BORRAR CARRITO</button>
-<button><Link to='/menu'>Voler al menu</Link></button>
-</div>
+    <div className='contentTotal'>
+        <h2>Total: $ {test.calcSubTotal()}</h2>
+        <button onClick={test.removeProductsCart}>BORRAR CARRITO</button>
+        <button><Link to='/menu'>Voler al menu</Link></button>
+    </div>
 </>
 )
 }

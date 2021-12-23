@@ -6,12 +6,14 @@ import { CartContext } from '../components/CartContext'
 
 
 const ItemDetail = ({ item }) => {
+    console.log(item.idCategory,'SOY ITEM CATEGORY')
 
     const [itemCount,setItemCount]= useState(0);
     const test = useContext(CartContext)
 
     
     const onAdd = (qty) => {
+        console.log(qty,'SOY QTY')
         alert("Tienes:" + qty + " productos");
         setItemCount(qty)
         test.addToCart(item, qty)
@@ -33,8 +35,8 @@ const ItemDetail = ({ item }) => {
                     <p>Category:{item.idCategory}</p>
                     <h3 className='product__price'>Precio:$ {item.price}</h3>
                     <h3>Stock:{item.stock}</h3>
-            
-                    <ItemCount stock={item.stock} onAdd={onAdd}/>            
+               
+                    <ItemCount stock={item.stock} onAdd={onAdd} cartQuantity={itemCount}/>            
                     
                 </td>
 

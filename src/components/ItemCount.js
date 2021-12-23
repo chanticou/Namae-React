@@ -5,7 +5,7 @@ import CartWidget from './CartWidget';
 
 
 
-const ItemCount = ({stock, onAdd}) => {
+const ItemCount = ({stock, onAdd, cartQuantity}) => {
     //contador
     //usestate(0)=> me va a devolver un array, y decir cual es el valor inicial que contiene el estado
     //ese arreglo va a contener dos valores, el primero es el valor que contiene el estado (en este caso 0)
@@ -15,10 +15,11 @@ const ItemCount = ({stock, onAdd}) => {
     const [stateStock, setStateStock] = useState(stock)
  
 
-    const test = useContext(CartContext)
-
+    // const test = useContext(CartContext)
+ 
     //FUNCIONES
     const sumar=()=>{
+  
         // setcontador => metodo ASINCRONO => metodo que cambia el estado es Asincrono
         if(contador < stock){
             setcontador(contador + 1)
@@ -45,15 +46,14 @@ const ItemCount = ({stock, onAdd}) => {
     
     return (
         <>
-      
-        
         <CartWidget contador={contador} /> 
         <div className='content-button'>
             <button onClick={restar}> -  </button>
             <span className='quiantity'>{contador}</span>
             <button onClick={sumar}>  + </button>
             <button onClick={() => onAdd(contador)}>Agregar al carrito</button>
-            </div>
+            <h1>{cartQuantity}</h1>
+        </div>
             
         </>
     )

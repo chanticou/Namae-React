@@ -323,3 +323,8 @@ li:hover{
   justify-content: center;
   margin-top:80px;
 } */
+.contentNoProducts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
