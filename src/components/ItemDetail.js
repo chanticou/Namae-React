@@ -13,7 +13,6 @@ const ItemDetail = ({ item }) => {
 
     
     const onAdd = (qty) => {
-        console.log(qty,'SOY QTY')
         alert("Tienes:" + qty + " productos");
         setItemCount(qty)
         test.addToCart(item, qty)
@@ -29,15 +28,13 @@ const ItemDetail = ({ item }) => {
                     <img className='product__img' src={item.img} alt='philadefia' ></img>
                 </td>
 
-                <td>           
+                <td className='itemDetalContainer'>           
                     <h3 className='product__title'>{item.name}</h3>            
                     <p>{item.description}</p>
-                    <p>Category:{item.idCategory}</p>
                     <h3 className='product__price'>Precio:$ {item.price}</h3>
                     <h3>Stock:{item.stock}</h3>
                
-                    <ItemCount stock={item.stock} onAdd={onAdd} cartQuantity={itemCount}/>            
-                    
+                    <ItemCount stock={item.stock} onAdd={onAdd} />            
                 </td>
 
             </tr>
@@ -45,7 +42,7 @@ const ItemDetail = ({ item }) => {
         </table>     
         
         <div className='menu'>     
-            <button><Link to='/menu'>Voler al menu</Link></button>
+            <button className='volverAlMenu'><Link to='/menu'>Voler al menu</Link></button>
         </div>
         </>
     );

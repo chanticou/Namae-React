@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom'
 import SearchForm from '../components/SearchForms'
 import CartWidget  from './CartWidget';

@@ -1,4 +1,3 @@
-
 //2)
 import { BrowserRouter , Switch, Route, Link} from 'react-router-dom'
 import Main from '../Main'
@@ -9,6 +8,8 @@ import ItemListContainer from '../components/ItemListContainer'
 import NavBar from '../components/NavBar'
 import Cart from '../components/Cart'
 import CartContextProvider from '../components/CartContext'
+import Ticket from '../components/Ticket'
+
 
 const Home = () =>{
 
@@ -50,19 +51,18 @@ const Home = () =>{
           <Route exact path='/cart'>
             <Cart />
           </Route>
+          
+          <Route exact path='/ticket'>
+            <Ticket />
+          </Route> 
 
-            
-        </Switch>
 
-      </BrowserRouter>
-      </CartContextProvider>
-
-  )
+          </Switch>
+          
+          </BrowserRouter>
+          </CartContextProvider>
+          
+          )
 }
     
   export default Home;
-
-
-
-
-

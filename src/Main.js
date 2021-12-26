@@ -1,5 +1,6 @@
-import sushimain from './assets/img/sushiMain.jpg'
-import palitosUno from './assets/img/sushi-palitos-1.png'
+// import sushimain from '../public/assets/img/sushiMain.jpg'
+
+import palitosUno from '../src/assets/img/sushi-palitos-1.png'
 
 
 const Main=()=>{
@@ -7,12 +8,12 @@ const Main=()=>{
         <>
         <div>
             <div className='content-img-main'>
-               
                 <div className='frase-imagen'>
                     <h1>NAMAE</h1>
                     <h2>SUSHI EN BUENOS AIRES</h2>
                 </div>
             </div>
+
             <div className='contentMain'>
                 <div className='contentInfo'>
                     <p>LOGO NAMAE </p>
@@ -33,7 +34,7 @@ const Main=()=>{
                         Moldes 1502 – Belgrano</h3>  
                 </div>
                 
-                <img className='palitosSushi' src = {palitosUno} alto='PalitosUno'></img>
+                <img className='palitosSushi' src={palitosUno} alt='PalitosUno'></img>
             </div>
 
         </div>

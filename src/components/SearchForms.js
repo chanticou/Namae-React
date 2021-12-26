@@ -1,4 +1,4 @@
-import lupa from '../assets/img/lupa.png'
+
 
 
 const SearchForm = () =>{

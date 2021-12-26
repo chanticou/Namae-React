@@ -8,7 +8,6 @@ import { useParams } from 'react-router'
 import { fireStoreFetchOne } from '../utils/firestoreFetch'
 
 
-
 const ItemDetailContainer = () => {
 
     const [dato, setDato] = useState({});

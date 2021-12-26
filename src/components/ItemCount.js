@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { useContext } from 'react'
-import { CartContext } from '../components/CartContext'
-import CartWidget from './CartWidget';
+
 
 
 
@@ -46,7 +44,6 @@ const ItemCount = ({stock, onAdd, cartQuantity}) => {
     
     return (
         <>
-        <CartWidget contador={contador} /> 
         <div className='content-button'>
             <button onClick={restar}> -  </button>
             <span className='quiantity'>{contador}</span>
@@ -64,13 +61,7 @@ const ItemCount = ({stock, onAdd, cartQuantity}) => {
     
     export default ItemCount;
     
-    
-    // <Link to='/cart'><button>CHEKoUT</button></Link>           
-
-
-    // <CartWidget />{contador}
-
-
+           
 
 
 

@@ -98,6 +98,7 @@ li:hover{
 .quiantity{
   font-size: 1.5em;
   font-weight: bold;
+  margin-top: 23px;
 }
 
 
@@ -167,7 +168,7 @@ li:hover{
   box-shadow: rgb(0, 0,0,.5);
   width:100vw;
   height: 90vh;
-  background-image: url('./assets/img/sushiMain.jpg');
+  background-image: url('../src/assets/img/sushiMain.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -261,6 +262,9 @@ li:hover{
    width:90%;
    height: auto;
  }
+.product__title{
+  font-size: 35px;;
+}
 
  .product__description{
    transition:all 350ms ease-out;
@@ -303,21 +307,26 @@ li:hover{
 
 
 .contentTotal{
-  display:flex;
+  display: flex;
   margin-top: 50px;
   justify-content: space-around;
   flex-direction: row-reverse;
-  background-color: black;
-  color: white;
+  background-color: rgb(221 221 221);
+  color: black;
+  margin-bottom:40px;
   padding: 20px 0;
 }
 
+.contentTotal h2{
+  margin-top:20px;
+}
 /* .tableItemDetail{
   display:flex;
   justify-content: space-around;
   
 } */
 /* 
+
 .menu{
   display: flex;
   justify-content: center;
@@ -328,3 +337,17 @@ li:hover{
   justify-content: center;
   align-items: center;
 }
+
+
+.itemDetailName{
+  text-align: center;
+  font-size: 50px;
+}
+
+.menu{
+  text-align: center;
+}
+/* 
+.contentItemCart{
+  width: 543px;
+} */

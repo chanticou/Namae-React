@@ -1,13 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
-
  
 export const CartContext = React.createContext(); 
 
 
 const CartContextProvider = ({children}) =>{
+
     const [cartList, setCartList] = useState([])
-    
+    const [userEmail, setUserEmail]=useState('')
+
+
     const addToCart = (item, qty) =>{
         let found = cartList.find(product => product.idItem === item.id)
         console.log(item.id)
@@ -60,8 +62,12 @@ const CartContextProvider = ({children}) =>{
         return metodoReduce;
     }
 
+    const getUsers=(form)=>{
+        setUserEmail(form)
+    }
+
     return(
-        <CartContext.Provider value={{ cartList, addToCart, removeProductsCart,  deleteItem, calcularTotalPorItem, calcSubTotal  }}>
+        <CartContext.Provider value={{ cartList, addToCart, removeProductsCart,  deleteItem, calcularTotalPorItem, calcSubTotal,getUsers   }}>
             {children}
         </CartContext.Provider>
     )
