@@ -29,8 +29,7 @@ const CartContextProvider = ({children}) =>{
             //Si el producto esta, aumentamos su cantidad
             found.qtyItems += qty;
             setCartList([...cartList])
-        }
-      
+        } 
     }
 
     //PARA BORRAR LOS PRODUCTOS DEL CARRITO
